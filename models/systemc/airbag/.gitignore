@@ -1,0 +1,6 @@
+*testbed*.cpp
+*.o
+*.x
+*.tmp
+/build/
+
