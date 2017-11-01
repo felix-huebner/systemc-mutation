@@ -1,0 +1,30 @@
+set(LLVM_LINK_COMPONENTS support)
+
+add_clang_executable(mutate++
+  mutation.cpp
+  standard_mutation.cpp
+  standard_mutation.h
+  mutant_stream_provider.cpp
+  mutant_stream_provider.h
+  byte_order_mutation.cpp
+  byte_order_mutation.h
+  mem_access_mutation.cpp
+  mem_access_mutation.h
+  precision_mutation.cpp
+  precision_mutation.h
+  systemc_mutation.cpp
+  systemc_mutation.h
+  switch_ports_mutation.cpp
+  switch_ports_mutation.h
+  stuck_at_mutation.cpp
+  stuck_at_mutation.h
+  utils.cpp
+  utils.h
+  matchers.cpp
+  matchers.h
+  )
+target_link_libraries(mutate++
+  clangTooling
+  clangBasic
+  clangASTMatchers
+  )
